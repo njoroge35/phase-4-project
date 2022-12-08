@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-    has_secure_password
-    validates :email, {presence: true, uniqueness: true}
+  has_secure_password
 
-    has_many :bookclub_users, dependent: :destroy
-    has_many :bookclubs, through: :bookclub_users
-    has_many :comments, dependent: :destroy
+  has_many :books, dependent: :delete_all
+
+  validates_presence_of :name, :email, :password_digest
+  validates :email, uniqueness: true
 end

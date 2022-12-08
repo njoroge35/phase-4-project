@@ -1,9 +1,6 @@
 class Book < ApplicationRecord
-    validates :title, {presence: true }
-    validates :author, {presence: true }
-    validates :imageURL, {presence: true }
-    validates :description, {presence: true }
+  belongs_to :user
 
-    has_many :bookclub_books, dependent: :destroy
-    has_many :bookclubs, through: :bookclub_books 
+  validates :title, presence: true
+  validates :category, presence: true
 end

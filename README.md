@@ -2,6 +2,10 @@
 # BOOK VILLAGE
 This app allows users to add books.
 
+It was built using;
+- ReactJs
+- Rails
+
 ## Authors
 
 - David Njoroge
